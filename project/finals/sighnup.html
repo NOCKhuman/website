@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: calibri;
+
+        }
+
+        body {
+            background-color: yellow;
+
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+
+            /* Fallback color */
+            background-color: yellow;
+            background-size: cover;
+
+
+            /* Black w/ opacity */
+            padding-top: 150px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            padding: 30px;
+
+            background-color: yellow;
+            margin: 5px auto;
+            /* 15% from the top and centered */
+            border: 3px solid black;
+            width: 25%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        .mode {
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 5;
+        }
+
+        .container {
+            margin-bottom: 30px;
+            width: 80%;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0.5)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0.5)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .animateB {
+            -webkit-animation: animateunzoom 0.6s;
+            animation: animateunzoom 0.6s
+        }
+
+        @-webkit-keyframes animateunzoom {
+            from {
+                -webkit-transform: scale(1)
+            }
+
+            to {
+                -webkit-transform: scale(0.5)
+            }
+        }
+
+        @keyframes animateunzoom {
+            from {
+                transform: scale(1)
+            }
+
+            to {
+                transform: scale(0.5)
+            }
+        }
+
+        #id01 {
+            display: block;
+        }
+
+        .usser {
+            margin-top: 20px;
+        }
+
+        .pass {
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        #lo {
+            text-align: center;
+            margin-left: 6.5%;
+        }
+
+        .int {
+            text-decoration: none;
+            border-top-style: groove;
+            border-right-style: groove;
+            border-left-style: groove;
+            border-bottom-style: groove;
+            background-color: black;
+        }
+     
+    </style>
+    <!--part 1-->
+    <div id="id01" class="modal" style="z-index: 10;">
+        <div id="from" class="modal-content animate" style="z-index: 12;">
+            <div id="C" class="container">
+                <div class="usser">
+                    <label for="psw"><b>User Name</b></label>
+                    <input id="ans" type="type" placeholder="Enter User Name">
+
+                </div>
+                <div class="pass">
+                    <label for="psw"><b>Password</b></label>
+                    <input id="answer" type="password" placeholder="Enter Password">
+                    <button id="login" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--part 2-->
+    <div class="mode" id="eight">
+        <h1 id="uan">You Are Now Signed In</h1>
+        <button id="logi" class="logi" type="submit" style=" margin-left: 38%; position: absolute;">click here</button>
+        <p class="lo" id="lo" style="margin-left: 4.5%;">to go back to the home page signed in</p>
+    </div>
+    <!--part 3-->
+    <div id="id1" class="modl">
+
+        <div id="C">
+            <input id="answer" class="int" type="text" placeholder="type notes here"
+                style="color: white; background-color: black; top:0; left:0; bottom:0; right:0; width:90%; height:5%; border:none; margin:0; padding:0; overflow:hidden; position: absolute;">
+            <h2 id="un" style="margin-left: 90%; margin-top: 0%; position: absolute;">user name</h2>
+        </div>
+    </div>
+
+
+    <script>
+        function clickAction() {
+            document.getElementById('id01').style.display = 'none';
+            document.getElementById('form').style.display = 'none';
+            un.textContent = ans.value;
+
+        }
+
+        function mesin() {
+            un.textContent = ans.value;
+        }
+
+
+
+        ans.oninput = mesin;
+
+        login.onclick = clickAction;
+
+        function clickActio() {
+            document.getElementById('logi').style.display = 'none';
+            document.getElementById('lo').style.display = 'none';
+            document.getElementById('uan').style.display = 'none';
+            document.getElementById('eight').style.display = 'none';
+        }
+
+
+        logi.onclick = clickActio;
+
+
+
+    </script>
+</body>
+
+</html>
